@@ -11,7 +11,7 @@ axios.get(url).then(response => {
         .filter(filtros.brasileiros) //filtra os br
     let menor = JSON.stringify(func.reduce(filtros.menorSalario))//aplica o reduce para reduzir o array para o elemento com menor salario
     let maior = JSON.stringify(func.reduce(filtros.maiorSalario))//transforma o objeto em string
-    console.log(`Menor salario: ${menor}`)//menor salario
-    console.log(`Maior salario: ${maior}`)//maior salario
+    console.log(`Menor é salario: ${menor}`)//menor salario
+    console.log(`Maior é salario: ${maior}`)//maior salario
 })
 
