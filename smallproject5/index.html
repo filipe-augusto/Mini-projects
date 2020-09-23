@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" type="text/css" href="estilo.css" media="screen" />
+    <title>MALWARES</title>
+    <!-- npm i -g  http-server  instalar-->
+    <!-- http-server . executar-->
+    <style>
+
+.borda{
+   
+   border-color: blue 1px solid;
+   background-color: blueviolet;
+   width: 300px;
+   height: 300px;
+}
+h1{
+   color:blue;
+}
+    </style>
+</head>
+
+
+<body>
+    <header>
+        <h1>principais malwares </h1>
+    </header>
+    <nav>
+        <a href="pages/pag1.html"> worn</a>
+        <a href="pages/pag2.html"> pagina 2</a>
+    </nav>
+    <div class="borda">
+        <section id="conteudo"> </section>
+    </div>
+   
+    <footer> final da pagina</footer>
+
+    <script>
+
+        document.querySelectorAll('a').forEach(link => {
+            const conteudo = document.getElementById('conteudo')
+            link.onclick = function (e) {
+                e.preventDefault()//previnir o conteudo padrao
+                fetch(link.href) //ajax pegando o link
+                    .then(resp => resp.text()) //recebe o texto 
+                    .then(html => conteudo.innerHTML = html) //inclui ele na pagina
+            }
+
+        })
+    </script>
+</body>
+
+
+
+</html>
